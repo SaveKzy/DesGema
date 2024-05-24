@@ -1,0 +1,4 @@
+
+    vector<pair<int,int> > grafo_com_peso[n];
+    vector<int> grafo_sem_peso[n];
+    

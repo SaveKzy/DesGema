@@ -1,0 +1,14 @@
+queue<int> fila;
+for(int i=1;i<=n;i++) dist[i] = -1;
+dist[1] = 0;
+fila.push(1);
+
+while(fila.size()){
+    int at = fila.front(); fila.pop();
+    for(int i = 0; i < grafo[at].size();i++){
+        int filho = grafo[at][i];
+        if(dist[filho] == -1){
+            fila.push(filho); dist[filho] = dist[at]+1;
+        }
+    }
+}
